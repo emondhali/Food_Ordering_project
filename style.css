@@ -1,0 +1,818 @@
+* {
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    font-family: sans-serif; /* Sets the default font family for all elements to sans-serif */
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for the entire document */
+}
+
+section {
+    width: 100%; /* Sets the width of section elements to 100% of their container */
+    height: 100vh; /* Sets the height of section elements to 100% of the viewport height */
+}
+
+section nav {
+    display: flex; /* Uses flexbox layout for the nav container */
+    justify-content: space-around; /* Distributes space around the child elements */
+    align-items: center; /* Centers child elements vertically */
+    position: fixed; /* Fixes the position of the nav at the top of the viewport */
+    right: 0; /* Aligns the nav to the right */
+    left: 0; /* Aligns the nav to the left */
+    background: rgb(107, 24, 24); /* Sets the background color of the nav */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Adds a shadow around the nav */
+    z-index: 1000; /* Ensures the nav is on top of other elements */
+}
+
+section nav .logo img {
+    width: 100px; /* Sets the width of logo images to 100px */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the logo */
+    margin: 7px 0; /* Adds 7px margin on top and bottom of the logo */
+}
+
+section nav ul {
+    list-style: none; /* Removes the default list style from ul elements */
+}
+
+section nav ul li {
+    display: inline-block; /* Displays list items inline */
+    margin: 0 15px; /* Adds 15px margin on left and right of list items */
+}
+
+section nav ul li a {
+    text-decoration: none; /* Removes the underline from links */
+    color: #000; /* Sets the text color of links to black */
+    font-weight: 500; /* Sets the font weight of links to 500 (medium) */
+    font-size: 17px; /* Sets the font size of links to 17px */
+    transition: 0.1s; /* Adds a transition effect for the color change */
+}
+
+section nav ul li a::after {
+    content: ''; /* Inserts an empty content after the link */
+    width: 0; /* Sets the initial width of the after element to 0 */
+    height: 2px; /* Sets the height of the after element to 2px */
+    background: #31befa; /* Sets the background color of the after element */
+    display: block; /* Displays the after element as a block */
+    transition: 0.2s linear; /* Adds a transition effect for the width change */
+}
+
+section nav ul li a:hover::after {
+    width: 100%; /* Sets the width of the after element to 100% when the link is hovered */
+}
+
+section nav ul li a:hover {
+    color: #31befa; /* Changes the text color of links to a specific color when hovered */
+}
+
+section nav .icon i {
+    font-size: 18px; /* Sets the font size of icons to 18px */
+    color: #000; /* Sets the color of icons to black */
+    margin: 0 5px; /* Adds 5px margin on left and right of icons */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over icons */
+    transition: 0.3s; /* Adds a transition effect for the color change */
+}
+
+section nav .icon i:hover {
+    color: #31befa; /* Changes the color of icons to a specific color when hovered */
+}
+
+section .main {
+    display: flex; /* Uses flexbox layout for the main container */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: space-around; /* Distributes space around the child elements */
+    position: relative; /* Positions the main container relative to its normal position */
+    top: 130px; /* Moves the main container 130px down */
+}
+
+section .main .men_text h1 {
+    font-size: 60px; /* Sets the font size of h1 elements inside men_text to 60px */
+    position: relative; /* Positions the h1 element relative to its normal position */
+    top: -90px; /* Moves the h1 element 90px up */
+    left: 20px; /* Moves the h1 element 20px to the right */
+}
+
+section .main .men_text h1 span {
+    margin-left: 15px; /* Adds 15px margin to the left of span elements inside h1 */
+    color: #31befa; /* Sets the text color of span elements to a specific color */
+    font-family: mv boli; /* Sets the font family of span elements to MV Boli */
+    line-height: 22px; /* Sets the line height of span elements to 22px */
+    font-size: 70px; /* Sets the font size of span elements to 70px */
+}
+
+section .main .main_image img {
+    width: 700px; /* Sets the width of images inside main_image to 700px */
+    position: relative; /* Positions the image relative to its normal position */
+    left: 70px; /* Moves the image 70px to the right */
+}
+
+section p {
+    width: 650px; /* Sets the width of paragraph elements to 650px */
+    text-align: justify; /* Justifies the text inside paragraph elements */
+    position: relative; /* Positions the paragraph relative to its normal position */
+    left: 123px; /* Moves the paragraph 123px to the right */
+    bottom: 120px; /* Moves the paragraph 120px down */
+    line-height: 22px; /* Sets the line height of paragraph elements to 22px */
+}
+
+section .main_btn {
+    background: #31befa; /* Sets the background color of buttons to a specific color */
+    position: relative; /* Positions the button relative to its normal position */
+    left: 123px; /* Moves the button 123px to the right */
+    bottom: 30px; /* Moves the button 30px down */
+    width: 150px; /* Sets the width of buttons to 150px */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over buttons */
+    padding: 12px 25px; /* Adds 12px padding on top and bottom, and 25px on left and right of buttons */
+}
+
+section .main_btn a {
+    color: #ffffff; /* Sets the text color of links inside buttons to white */
+    margin-right: 5px; /* Adds 5px margin to the right of links */
+    text-decoration: none; /* Removes the underline from links */
+}
+
+section .main_btn i {
+    color: #fff; /* Sets the color of icons inside buttons to white */
+    transition: 0.3s; /* Adds a transition effect for the transform property */
+}
+
+section .main_btn:hover i {
+    transform: translateX(7px); /* Moves the icons 7px to the right when the button is hovered */
+}
+
+
+
+/* About */
+
+.about {
+    width: 100%; /* Sets the width of the .about section to 100% of its container */
+    height: 100vh; /* Sets the height of the .about section to 100% of the viewport height */
+    padding: 70px 0; /* Adds 70px padding on top and bottom, and 0 padding on left and right */
+}
+
+.about .about_main {
+    display: flex; /* Uses flexbox layout for the .about_main container */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: space-around; /* Distributes space around the child elements */
+}
+
+.about .about_main .image img {
+    width: 800px; /* Sets the width of images inside .about_main .image to 800px */
+    position: relative; /* Positions the image relative to its normal position */
+    top: 60px; /* Moves the image 60px down from its normal position */
+}
+
+.about .about_main .about_text h1 span {
+    color: #fac031; /* Sets the text color of span elements inside h1 in .about_text to a specific color */
+    margin-right: 15px; /* Adds 15px margin to the right of span elements inside h1 in .about_text */
+    font-family: mv boli; /* Sets the font family of span elements inside h1 in .about_text to MV Boli */
+}
+
+.about .about_main .about_text h1 {
+    font-size: 55px; /* Sets the font size of h1 elements inside .about_text to 55px */
+    position: relative; /* Positions the h1 element relative to its normal position */
+    bottom: 50px; /* Moves the h1 element 50px up from its normal position */
+}
+
+.about .about_main .about_text h3 {
+    font-size: 30px; /* Sets the font size of h3 elements inside .about_text to 30px */
+    margin: 0 0 50px 0; /* Adds 0 margin on top, 0 margin on right, 50px margin on bottom, and 0 margin on left */
+}
+
+.about .about_main .about_text p {
+    width: 650px; /* Sets the width of paragraph elements inside .about_text to 650px */
+    text-align: justify; /* Justifies the text inside paragraph elements */
+    margin-right: 30px; /* Adds 30px margin to the right of paragraph elements */
+    line-height: 22px; /* Sets the line height of paragraph elements to 22px */
+}
+
+.about .about_btn {
+    background: #fac031; /* Sets the background color of .about_btn to a specific color */
+    padding: 12px 25px; /* Adds 12px padding on top and bottom, and 25px padding on left and right */
+    text-decoration: none; /* Removes the underline from the text inside .about_btn */
+    color: #fff; /* Sets the text color of .about_btn to white */
+    position: relative; /* Positions the .about_btn relative to its normal position */
+    left: 55%; /* Moves the .about_btn 55% to the right from its normal position */
+    bottom: 30px; /* Moves the .about_btn 30px down from its normal position */
+}
+
+
+/* Menu */
+
+.menu {
+    width: 100%; /* Sets the width of the .menu section to 100% of its container */
+    padding: 70px 0; /* Adds 70px padding on top and bottom, and 0 padding on left and right */
+}
+
+.menu h1 {
+    font-size: 55px; /* Sets the font size of h1 elements inside .menu to 55px */
+    display: flex; /* Uses flexbox layout for the h1 element */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+    margin-bottom: 30px; /* Adds 30px margin at the bottom of h1 */
+}
+
+.menu h1 span {
+    color: #fac031; /* Sets the text color of span elements inside h1 in .menu to a specific color */
+    margin-left: 15px; /* Adds 15px margin to the left of span elements inside h1 */
+    font-family: mv boli; /* Sets the font family of span elements inside h1 to MV Boli */
+}
+
+.menu h1 span::after {
+    content: ''; /* Inserts an empty content after the span element */
+    width: 100%; /* Sets the width of the after element to 100% */
+    height: 2px; /* Sets the height of the after element to 2px */
+    background: #fac031; /* Sets the background color of the after element */
+    display: block; /* Displays the after element as a block */
+    position: relative; /* Positions the after element relative to its normal position */
+    bottom: 15px; /* Moves the after element 15px up from its normal position */
+}
+
+.menu .menu_box {
+    width: 95%; /* Sets the width of .menu_box to 95% of its container */
+    margin: 0 auto; /* Centers .menu_box horizontally */
+    display: grid; /* Uses grid layout for .menu_box */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Creates a grid with 4 equal columns */
+    grid-gap: 15px; /* Sets the gap between grid items to 15px */
+}
+
+.menu .menu_box .menu_card {
+    width: 325px; /* Sets the width of .menu_card to 325px */
+    height: 480px; /* Sets the height of .menu_card to 480px */
+    padding-top: 10px; /* Adds 10px padding on top of .menu_card */
+    margin-bottom: 20px; /* Adds 20px margin at the bottom of .menu_card */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Adds a box shadow to .menu_card */
+}
+
+.menu .menu_box .menu_card .menu_image {
+    width: 300px; /* Sets the width of .menu_image to 300px */
+    height: 245px; /* Sets the height of .menu_image to 245px */
+    margin: 0 auto; /* Centers .menu_image horizontally */
+    overflow: hidden; /* Hides any content that overflows .menu_image */
+}
+
+.menu .menu_box .menu_card .menu_image img {
+    width: 100%; /* Sets the width of images inside .menu_image to 100% */
+    height: 100%; /* Sets the height of images inside .menu_image to 100% */
+    object-fit: cover; /* Scales the image to cover the entire .menu_image container */
+    object-position: center; /* Centers the image within .menu_image */
+    transition: 0.3s; /* Adds a transition effect for the transform property */
+}
+
+.menu .menu_box .menu_card .menu_image:hover img {
+    transform: scale(1.1); /* Scales the image to 1.1 times its original size on hover */
+}
+
+.menu .menu_box .menu_card .small_card {
+    width: 45px; /* Sets the width of .small_card to 45px */
+    height: 45px; /* Sets the height of .small_card to 45px */
+    float: right; /* Floats .small_card to the right */
+    position: relative; /* Positions .small_card relative to its normal position */
+    top: -240px; /* Moves .small_card 240px up from its normal position */
+    right: -8px; /* Moves .small_card 8px to the right from its normal position */
+    opacity: 0; /* Sets the initial opacity of .small_card to 0 (invisible) */
+    border-radius: 7px; /* Sets the border radius of .small_card to 7px */
+    transition: 0.3s; /* Adds a transition effect for opacity and position */
+}
+
+.menu .menu_box .menu_card:hover .small_card {
+    position: relative; /* Resets the position of .small_card to relative */
+    top: -240px; /* Moves .small_card 240px up from its normal position */
+    right: 20px; /* Moves .small_card 20px to the right from its normal position */
+    opacity: 1; /* Sets the opacity of .small_card to 1 (visible) */
+}
+
+.menu .menu_box .menu_card .small_card i {
+    font-size: 25px; /* Sets the font size of icons inside .small_card to 25px */
+    display: flex; /* Uses flexbox layout for icons inside .small_card */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+    line-height: 50px; /* Sets the line height of icons inside .small_card to 50px */
+    color: #000; /* Sets the color of icons inside .small_card to black */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over icons */
+    text-shadow: 0 0 6px #000; /* Adds a shadow effect to the text of icons */
+    transition: 0.2s; /* Adds a transition effect for color change */
+}
+
+.menu .menu_box .menu_card .small_card i:hover {
+    color: #fac031; /* Changes the color of icons inside .small_card to a specific color on hover */
+}
+
+.menu .menu_box .menu_card .menu_info h2 {
+    width: 60%; /* Sets the width of h2 elements inside .menu_info to 60% */
+    text-align: center; /* Centers the text inside h2 elements */
+    margin: 10px auto 10px auto; /* Adds margin to h2 elements */
+    font-size: 25px; /* Sets the font size of h2 elements inside .menu_info to 25px */
+    color: #fac031; /* Sets the text color of h2 elements inside .menu_info to a specific color */
+}
+
+.menu .menu_box .menu_card .menu_info p {
+    text-align: center; /* Centers the text inside paragraph elements */
+    margin-top: 8px; /* Adds 8px margin at the top of paragraph elements */
+    line-height: 21px; /* Sets the line height of paragraph elements to 21px */
+}
+
+.menu .menu_box .menu_card .menu_info h3 {
+    text-align: center; /* Centers the text inside h3 elements */
+    margin-top: 10px; /* Adds 10px margin at the top of h3 elements */
+}
+
+.menu .menu_box .menu_card .menu_info .menu_icon {
+    color: #fac031; /* Sets the color of .menu_icon elements to a specific color */
+    text-align: center; /* Centers the text inside .menu_icon elements */
+    margin: 10px 0 10px 0; /* Adds margin to .menu_icon elements */
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn {
+    display: flex; /* Uses flexbox layout for .menu_btn */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+    text-decoration: none; /* Removes the underline from text inside .menu_btn */
+    color: white; /* Sets the text color inside .menu_btn to white */
+    background: #000; /* Sets the background color of .menu_btn to black */
+    padding: 8px 10px; /* Adds 8px padding on top and bottom, and 10px padding on left and right of .menu_btn */
+    margin: 0 80px; /* Adds margin around .menu_btn */
+    transition: 0.3s; /* Adds a transition effect for color change */
+}
+
+
+
+/* Gallary */
+
+.gallary {
+    width: 100%; /* Sets the width of the .gallary section to 100% of its container */
+    padding: 70px 0; /* Adds 70px padding on top and bottom, and 0 padding on left and right */
+}
+
+.gallary h1 {
+    font-size: 55px; /* Sets the font size of h1 elements inside .gallary to 55px */
+    display: flex; /* Uses flexbox layout for the h1 element */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+}
+
+.gallary h1 span {
+    margin-left: 15px; /* Adds 15px margin to the left of span elements inside h1 */
+    color: #fac031; /* Sets the text color of span elements inside h1 in .gallary to a specific color */
+    font-family: mv boli; /* Sets the font family of span elements inside h1 to MV Boli */
+}
+
+.gallary h1 span::after {
+    content: ''; /* Inserts an empty content after the span element */
+    width: 100%; /* Sets the width of the after element to 100% */
+    height: 2px; /* Sets the height of the after element to 2px */
+    background: #fac031; /* Sets the background color of the after element */
+    display: block; /* Displays the after element as a block */
+    position: relative; /* Positions the after element relative to its normal position */
+    bottom: 15px; /* Moves the after element 15px up from its normal position */
+}
+
+.gallary .gallary_image_box {
+    width: 95%; /* Sets the width of .gallary_image_box to 95% of its container */
+    margin: 10px auto; /* Centers .gallary_image_box horizontally and adds 10px margin on top and bottom */
+    display: grid; /* Uses grid layout for .gallary_image_box */
+    grid-template-columns: 1fr 1fr 1fr; /* Creates a grid with 3 equal columns */
+    grid-gap: 10px; /* Sets the gap between grid items to 10px */
+}
+
+.gallary .gallary_image_box .gallary_image {
+    display: flex; /* Uses flexbox layout for .gallary_image */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+    background: black; /* Sets the background color of .gallary_image to black */
+}
+
+.gallary .gallary_image_box .gallary_image img {
+    width: 100%; /* Sets the width of images inside .gallary_image to 100% */
+    transition: .3s; /* Adds a transition effect for image opacity */
+}
+
+.gallary .gallary_image_box .gallary_image:hover img {
+    opacity: 0.4; /* Reduces the opacity of images inside .gallary_image to 0.4 on hover */
+}
+
+.gallary .gallary_image_box .gallary_image h3 {
+    position: absolute; /* Positions h3 elements inside .gallary_image relative to the nearest positioned ancestor */
+    font-size: 35px; /* Sets the font size of h3 elements inside .gallary_image to 35px */
+    margin-bottom: 130px; /* Adds margin at the bottom of h3 elements inside .gallary_image */
+    color: #fac031; /* Sets the text color of h3 elements inside .gallary_image to a specific color */
+    font-family: polo; /* Sets the font family of h3 elements inside .gallary_image to Polo */
+    z-index: 5; /* Sets the stack order of h3 elements inside .gallary_image */
+    opacity: 0; /* Sets the initial opacity of h3 elements inside .gallary_image to 0 (invisible) */
+    transition: 0.3s; /* Adds a transition effect for opacity */
+}
+
+.gallary .gallary_image_box .gallary_image:hover h3 {
+    opacity: 1; /* Sets the opacity of h3 elements inside .gallary_image to 1 (visible) on hover */
+}
+
+.gallary .gallary_image_box .gallary_image p {
+    position: absolute; /* Positions paragraph elements inside .gallary_image relative to the nearest positioned ancestor */
+    width: 400px; /* Sets the width of paragraph elements inside .gallary_image to 400px */
+    margin-top: 30px; /* Adds margin at the top of paragraph elements inside .gallary_image */
+    text-align: center; /* Centers the text inside paragraph elements inside .gallary_image */
+    color: white; /* Sets the text color of paragraph elements inside .gallary_image to white */
+    line-height: 22px; /* Sets the line height of paragraph elements inside .gallary_image to 22px */
+    opacity: 0; /* Sets the initial opacity of paragraph elements inside .gallary_image to 0 (invisible) */
+    z-index: 5; /* Sets the stack order of paragraph elements inside .gallary_image */
+    transition: 0.3s; /* Adds a transition effect for opacity */
+}
+
+.gallary .gallary_image_box .gallary_image:hover p {
+    opacity: 1; /* Sets the opacity of paragraph elements inside .gallary_image to 1 (visible) on hover */
+}
+
+.gallary .gallary_image_box .gallary_image .gallary_btn {
+    position: absolute; /* Positions .gallary_btn relative to the nearest positioned ancestor */
+    margin-top: 180px; /* Adds margin at the top of .gallary_btn */
+    color: #000; /* Sets the text color of .gallary_btn to black */
+    background: #fac031; /* Sets the background color of .gallary_btn to a specific color */
+    padding: 7px 25px; /* Adds padding on top and bottom, and left and right of .gallary_btn */
+    text-decoration: none; /* Removes the underline from text inside .gallary_btn */
+    opacity: 0; /* Sets the initial opacity of .gallary_btn to 0 (invisible) */
+    transform: translateY(45px); /* Translates .gallary_btn 45px down */
+    z-index: 5; /* Sets the stack order of .gallary_btn */
+    transition: 0.3s; /* Adds a transition effect for opacity and transform */
+}
+
+.gallary .gallary_image_box .gallary_image:hover .gallary_btn {
+    opacity: 1; /* Sets the opacity of .gallary_btn to 1 (visible) on hover */
+    transform: translateY(0); /* Resets the transform of .gallary_btn to its original position on hover */
+}
+
+
+/* Review */
+
+.review {
+    width: 100%; /* Sets the width of the .review section to 100% of its container */
+    height: 100vh; /* Sets the height of the .review section to 100% of the viewport height */
+    padding: 70px 0; /* Adds 70px padding on top and bottom, and 0 padding on left and right */
+}
+
+.review h1 {
+    font-size: 55px; /* Sets the font size of h1 elements inside .review to 55px */
+    display: flex; /* Uses flexbox layout for the h1 element */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+}
+
+.review h1 span {
+    margin-left: 15px; /* Adds 15px margin to the left of span elements inside h1 */
+    color: #fac031; /* Sets the text color of span elements inside h1 in .review to a specific color */
+    font-family: mv boli; /* Sets the font family of span elements inside h1 to MV Boli */
+}
+
+.review h1 span::after {
+    content: ''; /* Inserts an empty content after the span element */
+    width: 100%; /* Sets the width of the after element to 100% */
+    height: 2px; /* Sets the height of the after element to 2px */
+    background: #fac031; /* Sets the background color of the after element */
+    position: relative; /* Positions the after element relative to its normal position */
+    bottom: 15px; /* Moves the after element 15px up from its normal position */
+    display: block; /* Displays the after element as a block */
+}
+
+.review .review_box {
+    width: 95%; /* Sets the width of .review_box to 95% of its container */
+    margin: 70px auto; /* Centers .review_box horizontally and adds 70px margin on top and bottom */
+    display: flex; /* Uses flexbox layout for .review_box */
+}
+
+.review .review_box .review_card {
+    width: 350px; /* Sets the width of .review_card to 350px */
+    height: 535px; /* Sets the height of .review_card to 535px */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Adds a box shadow effect to .review_card */
+    border-radius: 8px; /* Rounds the corners of .review_card */
+    padding: 8px 20px; /* Adds padding inside .review_card */
+    margin: 0 8px; /* Adds 0 margin on top and bottom, and 8px margin on left and right of .review_card */
+}
+
+.review .review_box .review_card .review_profile {
+    display: flex; /* Uses flexbox layout for .review_profile */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+    position: relative; /* Positions .review_profile relative to its normal position */
+    transition: 0.3s; /* Adds a transition effect for .review_profile */
+}
+
+.review .review_box .review_card:hover .review_profile {
+    transform: translateY(-60px); /* Moves .review_profile 60px up on hover */
+}
+
+.review .review_box .review_card .review_profile img {
+    width: 180px; /* Sets the width of images inside .review_profile to 180px */
+    height: 180px; /* Sets the height of images inside .review_profile to 180px */
+    object-fit: cover; /* Scales images to cover the entire container */
+    object-position: center; /* Centers images horizontally and vertically */
+    border-radius: 50%; /* Rounds the corners of the image to create a circular shape */
+    border: 5px solid #cccccc; /* Adds a 5px solid border around the image */
+}
+
+.review .review_box .review_card .review_text {
+    text-align: center; /* Centers text inside .review_text */
+}
+
+.review .review_box .review_card .review_text .name {
+    color: #000; /* Sets the text color of .name class inside .review_text to black */
+    transition: 0.3s; /* Adds a transition effect for .name class */
+}
+
+.review .review_box .review_card:hover .review_text .name {
+    transform: translateY(-50px); /* Moves .name class 50px up on hover */
+}
+
+.review .review_box .review_card .review_text .review_icon {
+    color: #fac031; /* Sets the color of .review_icon class inside .review_text to a specific color */
+    transition: 0.3s; /* Adds a transition effect for .review_icon class */
+}
+
+.review .review_box .review_card:hover .review_text .review_icon {
+    transform: translateY(-30px); /* Moves .review_icon class 30px up on hover */
+}
+
+.review .review_box .review_card .review_text .review_social i {
+    margin: 5px 1px; /* Adds 5px top and bottom margin, and 1px left and right margin to <i> elements inside .review_social */
+    font-size: 15px; /* Sets the font size of <i> elements inside .review_social to 15px */
+    opacity: 0; /* Sets the initial opacity of <i> elements inside .review_social to 0 (invisible) */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over <i> elements inside .review_social */
+    transition: 0.3s; /* Adds a transition effect for opacity */
+}
+
+.review .review_box .review_card:hover .review_text .review_social i {
+    opacity: 1; /* Sets the opacity of <i> elements inside .review_social to 1 (visible) on hover */
+    transform: translateY(-8px); /* Moves <i> elements inside .review_social 8px up on hover */
+}
+
+.review .review_box .review_card .review_text p {
+    text-align: center; /* Centers text inside paragraphs <p> inside .review_text */
+    line-height: 22px; /* Sets the line height of paragraphs <p> inside .review_text to 22px */
+    transition: 0.3s; /* Adds a transition effect for paragraphs <p> inside .review_text */
+}
+
+.review .review_box .review_card:hover .review_text p {
+    margin-top: 5px; /* Adds 5px top margin to paragraphs <p> inside .review_text on hover */
+}
+
+
+
+/* Order */
+
+.order {
+    width: 100%; /* Sets the width of the .order section to 100% of its container */
+    height: 100vh; /* Sets the height of the .order section to 100% of the viewport height */
+    padding: 70px 0; /* Adds 70px padding on top and bottom, and 0 padding on left and right */
+    background-image: url(image/bg2.jpg); /* Sets a background image for .order section */
+    background-size: cover; /* Scales the background image to cover the entire container */
+    background-position: center; /* Centers the background image */
+}
+
+.order h1 {
+    display: flex; /* Uses flexbox layout for h1 element */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+    color: #000; /* Sets the text color of h1 elements inside .order to black */
+    font-size: 55px; /* Sets the font size of h1 elements inside .order to 55px */
+}
+
+.order h1 span {
+    color: #fac031; /* Sets the text color of span elements inside h1 in .order to a specific color */
+    margin-right: 15px; /* Adds 15px margin to the right of span elements inside h1 */
+    font-family: mv boli; /* Sets the font family of span elements inside h1 to MV Boli */
+}
+
+.order h1 span::after {
+    content: ''; /* Inserts an empty content after the span element */
+    width: 100%; /* Sets the width of the after element to 100% */
+    height: 2px; /* Sets the height of the after element to 2px */
+    background: #fac031; /* Sets the background color of the after element */
+    display: block; /* Displays the after element as a block */
+    position: relative; /* Positions the after element relative to its normal position */
+    bottom: 15px; /* Moves the after element 15px up from its normal position */
+}
+
+.order .order_main {
+    display: flex; /* Uses flexbox layout for .order_main */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: space-around; /* Distributes child elements evenly with space around */
+}
+
+.order .order_main .order_image img {
+    width: 600px; /* Sets the width of images inside .order_image to 600px */
+}
+
+.order .order_main form {
+    display: grid; /* Uses CSS grid layout for forms inside .order_main */
+    grid-template-columns: 1fr 1fr; /* Defines two columns with equal width */
+    grid-gap: 0 10px; /* Sets the gap between rows to 0 and between columns to 10px */
+}
+
+.order .order_main form .input p {
+    line-height: 25px; /* Sets the line height of paragraphs <p> inside .input to 25px */
+}
+
+.order .order_main form .input {
+    margin: 5px; /* Adds 5px margin around .input elements */
+}
+
+.order .order_main form .input input {
+    width: 300px; /* Sets the width of input fields inside .input to 300px */
+    height: 35px; /* Sets the height of input fields inside .input to 35px */
+    padding: 0 10px; /* Adds 0 padding on top and bottom, and 10px padding on left and right */
+    border: 2px solid #cccccc; /* Sets a 2px solid border around input fields */
+    background: #eeeeee; /* Sets the background color of input fields to #eeeeee */
+    outline: none; /* Removes outline on focus */
+    border-radius: 3px; /* Rounds the corners of input fields */
+}
+
+.order .order_main form .input input:focus {
+    border: 2px solid #fac031; /* Sets the border color of input fields to a specific color on focus */
+}
+
+.order .order_main form .order_btn {
+    padding: 10px 0; /* Adds 10px padding on top and bottom, and 0 padding on left and right */
+    background: #fac031; /* Sets the background color of .order_btn to a specific color */
+    color: white; /* Sets the text color of .order_btn to white */
+    width: 40%; /* Sets the width of .order_btn to 40% of its container */
+    text-align: center; /* Centers text inside .order_btn */
+    margin-top: 20px; /* Adds 20px margin on top of .order_btn */
+    text-decoration: none; /* Removes underline from .order_btn */
+}
+
+
+
+
+/* Team */
+
+.team {
+    width: 100%; /* Sets the width of the .team section to 100% of its container */
+    height: 90vh; /* Sets the height of the .team section to 90% of the viewport height */
+    background-image: url(image/bg1.jpg); /* Sets a background image for .team section */
+    background-size: cover; /* Scales the background image to cover the entire container */
+    background-position: center; /* Centers the background image */
+}
+
+.team h1 {
+    display: flex; /* Uses flexbox layout for h1 element */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+    font-size: 55px; /* Sets the font size of h1 elements inside .team to 55px */
+    margin-bottom: 30px; /* Adds 30px margin at the bottom of h1 element */
+}
+
+.team h1 span {
+    color: #fac031; /* Sets the text color of span elements inside h1 in .team to a specific color */
+    margin-left: 15px; /* Adds 15px margin to the left of span elements inside h1 */
+    font-family: mv boli; /* Sets the font family of span elements inside h1 to MV Boli */
+}
+
+.team h1 span::after {
+    content: ''; /* Inserts an empty content after the span element */
+    width: 100%; /* Sets the width of the after element to 100% */
+    height: 2px; /* Sets the height of the after element to 2px */
+    background: #fac031; /* Sets the background color of the after element */
+    display: block; /* Displays the after element as a block */
+    position: relative; /* Positions the after element relative to its normal position */
+    bottom: 15px; /* Moves the after element 15px up from its normal position */
+}
+
+.team .team_box {
+    width: 95%; /* Sets the width of .team_box to 95% of its container */
+    margin: 0 auto; /* Centers .team_box horizontally using auto margins */
+    display: flex; /* Uses flexbox layout for .team_box */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+    position: relative; /* Positions .team_box relative to its normal position */
+    top: 13%; /* Moves .team_box 13% down from its normal position */
+}
+
+.team .team_box .profile {
+    width: 320px; /* Sets the width of .profile elements inside .team_box to 320px */
+    height: 320px; /* Sets the height of .profile elements inside .team_box to 320px */
+    border-radius: 50%; /* Rounds the corners of .profile elements to make them circular */
+    margin: 0 15px; /* Adds 0 margin on top and bottom, and 15px margin on left and right */
+    display: flex; /* Uses flexbox layout for .profile elements */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+    position: relative; /* Positions .profile elements relative to their normal position */
+    box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Adds a box shadow to .profile elements */
+    transition: 0.4s; /* Sets a transition duration of 0.4 seconds for smooth animations */
+}
+
+.team .team_box .profile:hover {
+    border-radius: 20px; /* Changes border-radius of .profile elements on hover to 20px */
+    height: 320px; /* Maintains the height of .profile elements on hover */
+}
+
+.team .team_box .profile img {
+    width: 250px; /* Sets the width of images inside .profile to 250px */
+    height: 250px; /* Sets the height of images inside .profile to 250px */
+    object-fit: cover; /* Scales images inside .profile to cover the entire area */
+    object-position: center; /* Centers images inside .profile */
+    border-radius: 50%; /* Rounds the corners of images inside .profile to make them circular */
+    cursor: pointer; /* Changes cursor to pointer when hovering over images inside .profile */
+    box-shadow: 0 0 8px rgba(0,0,0,0.5); /* Adds a box shadow to images inside .profile */
+    z-index: 2; /* Sets a higher stacking order for images inside .profile */
+    transition: 0.4s; /* Sets a transition duration of 0.4 seconds for smooth animations */
+}
+
+.team .team_box .profile:hover img {
+    border-radius: 20px; /* Changes border-radius of images inside .profile on hover to 20px */
+    margin-top: -230px; /* Moves images inside .profile 230px up on hover */
+}
+
+.team .team_box .profile .info {
+    position: absolute; /* Positions .info element absolute */
+    text-align: center; /* Centers text inside .info horizontally */
+    top: 25%; /* Sets the top position of .info element to 25% */
+    transition: 0.4s; /* Sets a transition duration of 0.4 seconds for smooth animations */
+}
+
+.team .team_box .profile:hover .info {
+    top: 60%; /* Moves .info element 60% down on hover */
+}
+
+.team .team_box .profile .info .name {
+    color: #fac031; /* Sets the text color of .name elements inside .info to a specific color */
+    margin-bottom: 15px; /* Adds 15px margin at the bottom of .name elements */
+}
+
+.team .team_box .profile .info .bio {
+    width: 70%; /* Sets the width of .bio elements inside .info to 70% */
+    text-align: center; /* Centers text inside .bio horizontally */
+    margin: 0 auto 10px auto; /* Centers .bio horizontally and adds margin */
+}
+
+.team .team_box .profile .info .team_icon i {
+    margin: 10px 5px 5px 0; /* Adds margin to icons inside .team_icon */
+    cursor: pointer; /* Changes cursor to pointer when hovering over icons */
+    transition: 0.3s; /* Sets a transition duration of 0.3 seconds for smooth animations */
+}
+
+.team .team_box .profile .info .team_icon i:hover {
+    color: #fac031; /* Changes the color of icons inside .team_icon on hover to a specific color */
+}
+
+/* Footer */
+
+footer {
+    width: 100%; /* Sets the width of footer to 100% */
+    padding: 30px 0 0 20px; /* Adds padding: top 30px, right 0, bottom 0, left 20px */
+    background: #eeeeee; /* Sets the background color of footer to a light gray */
+}
+
+footer .footer_main {
+    display: grid; /* Uses grid layout for .footer_main */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Defines 5 equal columns for .footer_main */
+}
+
+footer .footer_main .footer_tag {
+    text-align: center; /* Centers text inside .footer_tag */
+}
+
+footer .footer_main .footer_tag h2 {
+    color: #000; /* Sets the text color of h2 elements inside .footer_tag to black */
+    margin-bottom: 25px; /* Adds 25px margin at the bottom of h2 elements inside .footer_tag */
+    font-size: 30px; /* Sets the font size of h2 elements inside .footer_tag to 30px */
+}
+
+footer .footer_main .footer_tag p {
+    margin: 10px 0; /* Adds 10px margin on top and bottom of p elements inside .footer_tag */
+}
+
+footer .footer_main .footer_tag i {
+    margin: 0 5px; /* Adds 0 margin on top and bottom, and 5px margin on left and right of i elements inside .footer_tag */
+    cursor: pointer; /* Changes cursor to pointer when hovering over i elements inside .footer_tag */
+}
+
+footer .footer_main .footer_tag i:hover {
+    color: #fac031; /* Changes the color of i elements inside .footer_tag on hover to a specific color */
+}
+
+footer .end {
+    display: flex; /* Uses flexbox layout for .end */
+    align-items: center; /* Centers child elements vertically */
+    justify-content: center; /* Centers child elements horizontally */
+    padding: 15px; /* Adds 15px padding to .end */
+}
+
+footer .end span {
+    color: #fac031; /* Sets the text color of span elements inside .end to a specific color */
+    margin-left: 10px; /* Adds 10px margin to the left of span elements inside .end */
+}
+
+/* Customizing scrollbars */
+
+::-webkit-scrollbar {
+    width: 13px; /* Sets the width of the scrollbar to 13px */
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 15px; /* Rounds the corners of the scrollbar track */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5); /* Adds a box shadow to the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fac031; /* Sets the background color of the scrollbar thumb */
+    border-radius: 15px; /* Rounds the corners of the scrollbar thumb */
+}

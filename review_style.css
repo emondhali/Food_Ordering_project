@@ -1,0 +1,58 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #20698e;
+}
+
+.menu-section, .review-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-item, .review-item {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.menu-item img, .review-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+h2 span {
+    color: #f90;
+}
+
+.review-section h2, .review-item h3 {
+    margin: 10px 0;
+}
+
+.review-item p {
+    margin: 5px 0;
+}
+
+.review-item p:last-child {
+    color: #f90;
+}

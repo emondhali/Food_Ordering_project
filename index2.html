@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="style2.css">
+   
+</head>
+<body>
+
+    <!--Order-->
+
+    <div class="order" id="Order">
+        <h1><span>Order</span>Now</h1>
+    
+        <div class="order_main">
+    
+            <div class="order_image">
+                <img src="image/order_image.png">
+            </div>
+    
+            <form action="order_process.php" method="post">
+    
+                <div class="input">
+                    <p>Name</p>
+                    <input type="text" name="name" placeholder="your name" required>
+                </div>
+    
+                <div class="input">
+                    <p>Email</p>
+                    <input type="email" name="email" placeholder="your email" required>
+                </div>
+    
+                <div class="input">
+                    <p>Number</p>
+                    <input type="text" name="number" placeholder="your number" required>
+                </div>
+    
+                <div class="input">
+                    <p>How Much</p>
+                    <input type="number" name="quantity" placeholder="how many orders" required>
+                </div>
+    
+                <div class="input">
+                    <p>Your Order</p>
+                    <input type="text" name="order_item" placeholder="food name" required>
+                </div>
+    
+                <div class="input">
+                    <p>Address</p>
+                    <input type="text" name="address" placeholder="your address" required>
+                </div>
+    
+                <button type="submit" class="order_btn">Order Now</button>
+    
+            </form>
+    
+        </div>
+    
+    </div>
+
+
+
+    
+</body>
+</html>
+    
